@@ -11,7 +11,9 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'], // 在导入语句中没带文件后缀时，Webpack 会自动带上后缀去尝试访问文件是否存在。会先寻找 A.js、找不到就去找 A.jsx，按照规则找，最后还是找不到，就会报错
     alias: {
+      '@assets': path.join(__dirname, '../', 'assets/'),
       '@src': path.join(__dirname, '../', 'app/renderer'),
+      '@common': path.join(__dirname, '../', 'app/renderer/common'),
     },
   },
   module: {
